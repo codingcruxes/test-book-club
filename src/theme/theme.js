@@ -34,7 +34,7 @@ const theme = createTheme({
   shape: {
     borderRadius: 8,
   },
-  overrides: {
+  components: {
     MuiButton: {
       root: {
         borderRadius: 9,
@@ -43,9 +43,11 @@ const theme = createTheme({
         backgroundColor: "#ffffff",
       },
     },
-    MuiInputLabel: {
-      root: {
-        fontWeight: 600,
+    MuiOutlinedInput: {
+      styleOverrides: {
+        notchedOutline: {
+          border: "1px solid grey",
+        },
       },
     },
   },
