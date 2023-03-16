@@ -1,6 +1,6 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createTheme } from "@material-ui/core/styles";
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: "#1976d2",
@@ -10,7 +10,7 @@ const theme = createMuiTheme({
     },
     background: {
       default: "#f5f5f5",
-      paper: "#ffffff",
+      paper: "#f1f1f1",
     },
   },
   typography: {
@@ -26,8 +26,10 @@ const theme = createMuiTheme({
       lineHeight: 1.5,
     },
   },
-  spacing: {
-    unit: 8,
+  padding: {
+    small: 8,
+    medium: 14,
+    large: 24,
   },
   shape: {
     borderRadius: 8,
@@ -35,10 +37,10 @@ const theme = createMuiTheme({
   overrides: {
     MuiButton: {
       root: {
-        borderRadius: 24,
+        borderRadius: 9,
       },
       containedPrimary: {
-        color: "#ffffff",
+        backgroundColor: "#ffffff",
       },
     },
     MuiInputLabel: {

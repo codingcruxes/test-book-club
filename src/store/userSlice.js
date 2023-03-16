@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const counterSlice = createSlice({
+export const userSlice = createSlice({
   name: "user",
   initialState: {
     value: 0,
+    name: "",
   },
   reducers: {
     increment: (state) => {
@@ -19,10 +20,13 @@ export const counterSlice = createSlice({
     incrementByAmount: (state, action) => {
       state.value += action.payload;
     },
+    updateUsername: (state, action) => {
+      state.name = action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const { increment, decrement, incrementByAmount } = userSlice.actions;
 
-export default counterSlice.reducer;
+export default userSlice.reducer;
