@@ -38,7 +38,6 @@ export const AddBook = () => {
     }
     setInput("");
     dispatch(updateList([input]));
-    setError("");
   }
   return (
     <Container id="addBook">
@@ -48,9 +47,9 @@ export const AddBook = () => {
           value={input}
           onChange={(e) => {
             setInput(e.target.value);
-            // if (error) {
-            //   setError("");
-            // }
+            if (error) {
+              setError("");
+            }
           }}
         />
         <Button onClick={handleSubmit} variant="contained">
